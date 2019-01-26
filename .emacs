@@ -14,7 +14,7 @@
   (package-refresh-contents)
   (package-install 'gruvbox-theme))
 ;;;;;;;;;
-(org-babel-load-file (expand-file-name "~/my-dot-files/emacs.org"))
+(org-babel-load-file (expand-file-name "~/emacs.org"))
 ;;;;;;;;;
 (custom-set-variables
  ;; custom-set-variables was added by Custom.

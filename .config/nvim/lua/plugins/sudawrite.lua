@@ -1,0 +1,5 @@
+return {
+	{
+		"lambddalisue/vim-suda",
+	},
+}

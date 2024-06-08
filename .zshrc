@@ -84,6 +84,8 @@ plugins=(
   zsh-autosuggestions
 )
 
+fpath+=${ZSH_CUSTOM:-${ZSH:-~/.oh-my-zsh}/custom}/plugins/zsh-completions/source
+
 source $ZSH/oh-my-zsh.sh
 
 # User configuration

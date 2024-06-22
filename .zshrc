@@ -120,3 +120,5 @@ alias yz=yazi
 
 eval "$(starship init zsh)"
 eval "$(zoxide init zsh)"
+
+if [ -e /home/isma/.nix-profile/etc/profile.d/nix.sh ]; then . /home/isma/.nix-profile/etc/profile.d/nix.sh; fi # added by Nix installer

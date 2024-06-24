@@ -118,7 +118,9 @@ alias la="exa -la --icons"
 alias cat=bat
 alias yz=yazi
 
-eval "$(starship init zsh)"
+# eval "$(starship init zsh)"
+# eval "$(oh-my-posh init zsh --config ~/.cache/oh-my-posh/themes/catppuccin.omp.json)"
+eval "$(oh-my-posh init zsh --config $HOME/.config/ohmyposh/catppuccin.omp.json)"
 eval "$(zoxide init zsh)"
 
 if [ -e /home/isma/.nix-profile/etc/profile.d/nix.sh ]; then . /home/isma/.nix-profile/etc/profile.d/nix.sh; fi # added by Nix installer

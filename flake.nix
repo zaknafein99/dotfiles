@@ -29,6 +29,8 @@
                         bat
                         direnv
                         git
+                        yazi
+                        eza
                     ];
                 };
 

@@ -41,6 +41,8 @@ if ! nix-env -iA \
 	nixpkgs.fzf \
 	nixpkgs.ripgrep \
 	nixpkgs.bat \
+	nixpkgs.yazi \
+	nixpkgs.eza \
 	nixpkgs.direnv \
 	nixpkgs.git; then
 	echo "Failed to install one or more packages. Exiting."
@@ -98,3 +100,4 @@ fi
 rm -rf "${NVIM_CONFIG}/.git"
 
 echo "Installation complete!"
+

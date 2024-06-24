@@ -56,6 +56,10 @@ if ! sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/maste
 	exit 1
 fi
 
+# Install Oh my posh
+mkdir ~/bin
+curl -s https://ohmyposh.dev/install.sh | bash -s -- -d ~/bin
+
 # Install build essentials
 echo "Installing build essentials..."
 if ! sudo apt-get update || ! sudo apt-get install -y build-essential; then
@@ -100,4 +104,3 @@ fi
 rm -rf "${NVIM_CONFIG}/.git"
 
 echo "Installation complete!"
-

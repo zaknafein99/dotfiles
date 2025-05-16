@@ -26,9 +26,7 @@ unset rc
 
 export SDKMAN_DIR="$HOME/.sdkman"
 [[ -s "$HOME/.sdkman/bin/sdkman-init.sh" ]] && source "$HOME/.sdkman/bin/sdkman-init.sh"
-### bling.sh source start
-test -f /usr/share/bazzite-cli/bling.sh && source /usr/share/bazzite-cli/bling.sh
-### bling.sh source end
+
 ### bling.sh source start
 test -f /usr/share/ublue-os/bling/bling.sh && source /usr/share/ublue-os/bling/bling.sh
 ### bling.sh source end

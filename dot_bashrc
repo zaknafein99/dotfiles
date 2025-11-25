@@ -27,6 +27,27 @@ unset rc
 export SDKMAN_DIR="$HOME/.sdkman"
 [[ -s "$HOME/.sdkman/bin/sdkman-init.sh" ]] && source "$HOME/.sdkman/bin/sdkman-init.sh"
 
+### BLE SH
+# bashrc
+
+# Write the following line near the top of .bashrc
+[[ $- == *i* ]] &&
+  source -- "$HOME/.local/share/blesh/ble.sh" --attach=none --rcfile "$HOME/.blerc"
+
+# Normal settings can be placed in between.
+
+# Write the following line at the bottom of .bashrc
+[[ ! ${BLE_VERSION-} ]] || ble-attach
+
+# Note: In ble-0.2 or before, use the following instead:
+#[[ $- == *i* ]] && source -- "$HOME/.local/share/blesh/ble.sh" --noattach --rcfile "$HOME/.blerc"
+#((_ble_bash)) && ble-attach
+
 ### bling.sh source start
 test -f /usr/share/ublue-os/bling/bling.sh && source /usr/share/ublue-os/bling/bling.sh
 ### bling.sh source end
+
+[[ -f ~/.bash-preexec.sh ]] && source ~/.bash-preexec.sh
+eval "$(atuin init bash)"
+eval "$(starship init bash)"
+

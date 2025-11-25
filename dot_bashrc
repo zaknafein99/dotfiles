@@ -24,6 +24,11 @@ if [ -d ~/.bashrc.d ]; then
 fi
 unset rc
 
+# eza aliases
+alias ls='eza'
+alias ll='eza -l'
+alias la='eza -la'
+
 export SDKMAN_DIR="$HOME/.sdkman"
 [[ -s "$HOME/.sdkman/bin/sdkman-init.sh" ]] && source "$HOME/.sdkman/bin/sdkman-init.sh"
 
@@ -50,4 +55,3 @@ test -f /usr/share/ublue-os/bling/bling.sh && source /usr/share/ublue-os/bling/b
 [[ -f ~/.bash-preexec.sh ]] && source ~/.bash-preexec.sh
 eval "$(atuin init bash)"
 eval "$(starship init bash)"
-

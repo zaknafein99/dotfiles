@@ -8,9 +8,17 @@ This repository contains my personal dotfiles, managed using [chezmoi](https://w
 
 ## Installation
 
-### 1. Install chezmoi
+### One-line install (Recommended)
 
-First, ensure `chezmoi` is installed on your system.
+On a new machine, you can install `chezmoi` and apply the dotfiles with a single command:
+
+```sh
+sh -c "$(curl -fsLS get.chezmoi.io)" -- init --apply zaknafein99
+```
+
+### Manual Installation
+
+If you prefer to install `chezmoi` manually or use a package manager:
 
 **Linux:**
 ```sh
@@ -22,9 +30,7 @@ sh -c "$(curl -fsLS get.chezmoi.io)"
 brew install chezmoi
 ```
 
-### 2. Initialize and Apply
-
-To download and apply these dotfiles on a new machine in one go:
+Then initialize and apply:
 
 ```sh
 chezmoi init --apply zaknafein99

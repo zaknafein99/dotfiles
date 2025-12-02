@@ -26,6 +26,8 @@ if [ -d ~/.bashrc.d ]; then
 fi
 unset rc
 
+fastfetch
+
 # eza aliases
 alias ls='eza'
 alias ll='eza -l'

@@ -48,10 +48,6 @@ export SDKMAN_DIR="$HOME/.sdkman"
 #[[ $- == *i* ]] && source -- "$HOME/.local/share/blesh/ble.sh" --noattach --rcfile "$HOME/.blerc"
 #((_ble_bash)) && ble-attach
 
-### bling.sh source start
-test -f /usr/share/ublue-os/bling/bling.sh && source /usr/share/ublue-os/bling/bling.sh
-### bling.sh source end
-
 [[ -f ~/.bash-preexec.sh ]] && source ~/.bash-preexec.sh
 eval "$(atuin init bash)"
 eval "$(starship init bash)"

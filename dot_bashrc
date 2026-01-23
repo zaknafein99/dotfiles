@@ -1,5 +1,8 @@
 # .bashrc
 
+# Ensure ble.sh loads first (for best compatibility)
+[[ $- == *i* ]] && source -- "$HOME/.local/share/blesh/ble.sh" --attach=none --rcfile "$HOME/.blerc"
+
 # Source global definitions
 if [ -f /etc/bashrc ]; then
     . /etc/bashrc
@@ -26,7 +29,10 @@ if [ -d ~/.bashrc.d ]; then
 fi
 unset rc
 
-fastfetch
+# Interactive-only commands
+if [[ $- == *i* ]]; then
+    fastfetch
+fi
 
 # eza aliases
 alias ls='eza'
@@ -36,22 +42,6 @@ alias la='eza -la'
 export SDKMAN_DIR="$HOME/.sdkman"
 [[ -s "$HOME/.sdkman/bin/sdkman-init.sh" ]] && source "$HOME/.sdkman/bin/sdkman-init.sh"
 
-### BLE SH
-# bashrc
-
-# Write the following line near the top of .bashrc
-[[ $- == *i* ]] &&
-  source -- "$HOME/.local/share/blesh/ble.sh" --attach=none --rcfile "$HOME/.blerc"
-
-# Normal settings can be placed in between.
-
-# Write the following line at the bottom of .bashrc
-[[ ! ${BLE_VERSION-} ]] || ble-attach
-
-# Note: In ble-0.2 or before, use the following instead:
-#[[ $- == *i* ]] && source -- "$HOME/.local/share/blesh/ble.sh" --noattach --rcfile "$HOME/.blerc"
-#((_ble_bash)) && ble-attach
-
 [[ -f ~/.bash-preexec.sh ]] && source ~/.bash-preexec.sh
 eval "$(atuin init bash)"
 eval "$(starship init bash)"
@@ -59,3 +49,7 @@ eval "$(starship init bash)"
 export NVM_DIR="$HOME/.config/nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
 [ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
+
+# Attach ble.sh at the very end
+[[ ! ${BLE_VERSION-} ]] || ble-attach
+

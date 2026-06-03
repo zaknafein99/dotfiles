@@ -31,6 +31,11 @@ staged     = ""
 renamed    = ""
 deleted    = ""
 
+[custom.hostname]
+command = 'echo "󰋊 $(hostname)"'
+format = "[$output]($style) "
+style = "bold #94e2d5"
+
 [custom.bash]
 command = 'echo " bash"'
 when = 'test "$STARSHIP_SHELL" = "bash"'

@@ -1,0 +1,70 @@
+-- Change the default Omarchy look'n'feel.
+
+-- https://wiki.hypr.land/Configuring/Basics/Variables/#general
+-- hl.config({
+--   general = {
+--     -- No gaps between windows or borders.
+--     gaps_in = 0,
+--     gaps_out = 0,
+--     border_size = 0,
+--
+--     -- Change to niri-like side-scrolling layout.
+--     layout = "scrolling",
+--   },
+-- })
+
+-- https://wiki.hypr.land/Configuring/Basics/Variables/#decoration
+hl.config({
+  general = {
+    gaps_in = 8,
+    gaps_out = 16,
+  },
+
+  decoration = {
+    -- Use round window corners.
+    rounding = 10,
+
+    -- Dim inactive windows for better focus
+    dim_inactive = true,
+    dim_strength = 0.12,
+
+    shadow = {
+      enabled = true,
+      range = 12,
+      render_power = 4,
+      color = "rgba(00000055)",
+      offset = { 5, 5 },
+    },
+  },
+})
+
+-- Slower border animation for smooth gradient transitions
+hl.animation({ leaf = "border", enabled = true, speed = 3, bezier = "easeOutQuint" })
+
+-- https://wiki.hypr.land/Configuring/Basics/Variables/#animations
+-- hl.config({
+--   animations = {
+--     -- Disable all animations.
+--     enabled = false,
+--   },
+-- })
+
+-- Bounce effect when switching workspaces
+hl.curve("bounce", { type = "bezier", points = { { 0.1, 1.1 }, { 0.1, 1 } } })
+hl.animation({ leaf = "workspaces", enabled = true, speed = 6, bezier = "bounce", style = "slide" })
+
+-- https://wiki.hypr.land/Configuring/Basics/Variables/#layout
+-- hl.config({
+--   layout = {
+--     -- Avoid overly wide single-window layouts on wide screens.
+--     single_window_aspect_ratio = { 1, 1 },
+--   },
+-- })
+
+-- https://wiki.hypr.land/Configuring/Layouts/Scrolling-Layout/
+-- hl.config({
+--   scrolling = {
+--     -- See only one column per screen instead of two.
+--     column_width = 0.97,
+--   },
+-- })

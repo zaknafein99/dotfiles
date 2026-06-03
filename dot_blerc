@@ -1504,3 +1504,16 @@ blehook/eval-after-load keymap_vi blerc/vim-load-hook
 ## execution will be skipped.  The default value is 5.0 msec.
 
 #bleopt debug_profiler_tree_threshold=5.0
+
+#-----------------------------------------------------------------------------
+# Optimización de rendimiento para ble.sh
+#-----------------------------------------------------------------------------
+# Aumenta el retraso del autocompletado automático a 200 ms.
+# Esto evita que ble.sh intente autocompletar en cada pulsación rápida,
+# reduciendo drásticamente el lag al escribir.
+bleopt complete_auto_delay=200
+
+# Si aún experimentas lag, puedes desactivar el autocompletado en tiempo real
+# y usar solo la tecla TAB (descomenta la siguiente línea):
+# bleopt complete_auto_complete=
+

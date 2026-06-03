@@ -1,6 +1,6 @@
 add_newline = true
 command_timeout = 500
-format = "$custom[$directory$git_branch$git_status]($style)$character"
+format = "$hostname$custom[$directory$git_branch$git_status]($style)$character"
 
 [character]
 error_symbol = "[✗](bold cyan)"
@@ -31,10 +31,11 @@ staged     = ""
 renamed    = ""
 deleted    = ""
 
-[custom.hostname]
-command = 'echo "󰋊 $(hostname)"'
-format = "[$output]($style) "
+[hostname]
+ssh_only = false
+format = "[󰋊 $hostname]($style) "
 style = "bold #94e2d5"
+trim_at = ""
 
 [custom.bash]
 command = 'echo " bash"'

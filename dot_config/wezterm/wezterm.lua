@@ -11,7 +11,7 @@ config.font = wezterm.font_with_fallback({
 	{ family = "Iosevka Nerd Font", weight = "Regular" },
 	{ family = "JetBrainsMono Nerd Font", weight = "Regular" },
 })
-config.font_size = 12.5
+config.font_size = 10
 config.harfbuzz_features = {
 	"calt=1", "liga=1",
 	"ss01=1", "ss02=1", "ss03=1", "ss04=1", "ss05=1",

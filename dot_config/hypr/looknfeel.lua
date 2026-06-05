@@ -18,6 +18,11 @@ hl.config({
   general = {
     gaps_in = 8,
     gaps_out = 16,
+
+    -- Resize windows by dragging on borders/gaps
+    resize_on_border = true,
+    extend_border_grab_area = 30,
+    hover_icon_on_border = true,
   },
 
   decoration = {

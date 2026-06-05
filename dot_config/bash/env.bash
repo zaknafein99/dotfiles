@@ -1,14 +1,13 @@
-# PATH and basic exports
-if ! [[ "$PATH" =~ "$HOME/.local/bin:$HOME/bin:" ]]; then
-    export PATH="$HOME/.local/bin:$HOME/bin:$PATH"
-fi
+# Omarchy
+export OMARCHY_PATH=$HOME/.local/share/omarchy
+export PATH="$OMARCHY_PATH/bin:$HOME/.local/bin:$HOME/bin:$PATH"
+
+# Editor
+export SUDO_EDITOR="$EDITOR"
+export BAT_THEME=ansi
+
+# Color man pages with bat
+export MANROFFOPT="-c"
+export MANPAGER="sh -c 'col -bx | bat -l man -p'"
 
 export HISTCONTROL=erasedups:ignoredups:ignorespace
-
-# Omarchy Envs
-export OMARCHY_PATH=$HOME/.local/share/omarchy
-[ -f "$OMARCHY_PATH/default/bash/envs" ] && source "$OMARCHY_PATH/default/bash/envs"
-
-# SDKMAN
-export SDKMAN_DIR="$HOME/.sdkman"
-[[ -s "$HOME/.sdkman/bin/sdkman-init.sh" ]] && source "$HOME/.sdkman/bin/sdkman-init.sh"

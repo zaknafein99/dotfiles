@@ -28,6 +28,15 @@ hl.config({
     dim_inactive = true,
     dim_strength = 0.12,
 
+    -- Vidrio esmerilado
+    blur = {
+      enabled = true,
+      size = 10,
+      passes = 3,
+      brightness = 0.60,
+      contrast = 0.75,
+    },
+
     shadow = {
       enabled = true,
       range = 12,

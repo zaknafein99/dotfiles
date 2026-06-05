@@ -7,12 +7,16 @@ local config = wezterm.config_builder()
 config.color_scheme = "Catppuccin Mocha"
 
 config.font = wezterm.font_with_fallback({
-	{ family = "Iosevka Nerd Font", weight = "Regular" },
 	{ family = "MonaspiceNe Nerd Font", weight = "Regular" },
+	{ family = "Iosevka Nerd Font", weight = "Regular" },
 	{ family = "JetBrainsMono Nerd Font", weight = "Regular" },
 })
 config.font_size = 12.5
-config.harfbuzz_features = { "calt=1", "liga=1" }
+config.harfbuzz_features = {
+	"calt=1", "liga=1",
+	"ss01=1", "ss02=1", "ss03=1", "ss04=1", "ss05=1",
+	"ss06=1", "ss07=1", "ss08=1", "ss09=1", "ss10=1",
+}
 config.mouse_bindings = {
 	{
 		event = { Up = { streak = 1, button = "Left" } },
@@ -21,7 +25,7 @@ config.mouse_bindings = {
 	},
 }
 
--- Ventana (Gradiente sofisticado con transparencia)
+-- Ventana (transparencia)
 config.window_background_opacity = 0.65
 config.window_close_confirmation = "NeverPrompt"
 config.adjust_window_size_when_changing_font_size = false
@@ -36,7 +40,6 @@ config.window_padding = {
 -- Pestañas y Barra de Estado
 config.use_fancy_tab_bar = false
 config.tab_bar_at_bottom = false
-config.status_update_interval = 1000
 
 config.colors = {
 	split = "#313244",
@@ -155,9 +158,7 @@ end)
 -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- --
 -- Comportamiento y Rendimiento
 -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- --
-config.front_end = "OpenGL"
 config.max_fps = 144
-config.enable_wayland = true
 config.scrollback_lines = 10000
 config.inactive_pane_hsb = {
 	saturation = 0.7,

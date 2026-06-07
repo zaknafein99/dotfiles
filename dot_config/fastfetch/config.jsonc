@@ -1,0 +1,96 @@
+{
+    "$schema": "https://github.com/fastfetch-cli/fastfetch/raw/dev/doc/json_schema.json",
+    "logo": {
+        "source": "/usr/share/sddm/themes/cachyos-simplyblack/cachyos.png",
+        "type": "kitty",
+        "width": 28,
+        "height": 12,
+        "padding": {
+            "top": 1,
+            "right": 4,
+            "left": 2
+        }
+    },
+    "display": {
+        "separator": " ",
+        "color": {
+            "title": "magenta"
+        }
+    },
+    "modules": [
+        {
+            "key": "╭───────────╮",
+            "type": "custom"
+        },
+        {
+            "key": "│ {#31} usuario {#keys}│",
+            "type": "title",
+            "format": "{user-name}",
+            "outputColor": "yellow"
+        },
+        {
+            "key": "│ {#32}󰇅 host    {#keys}│",
+            "type": "title",
+            "format": "{host-name}",
+            "outputColor": "magenta"
+        },
+        {
+            "key": "│ {#33}󰅐 uptime  {#keys}│",
+            "type": "uptime",
+            "outputColor": "yellow"
+        },
+        {
+            "key": "│ {#34}󰣇 distro  {#keys}│",
+            "type": "os",
+            "outputColor": "blue"
+        },
+        {
+            "key": "│ {#35} kernel  {#keys}│",
+            "type": "kernel",
+            "outputColor": "magenta"
+        },
+        {
+            "key": "│ {#36} de/wm   {#keys}│",
+            "type": "de",
+            "outputColor": "blue"
+        },
+        {
+            "key": "│ {#31} term    {#keys}│",
+            "type": "terminal",
+            "outputColor": "magenta"
+        },
+        {
+            "key": "│ {#32} shell   {#keys}│",
+            "type": "shell",
+            "outputColor": "yellow"
+        },
+        {
+            "key": "│ {#33}󰍛 cpu     {#keys}│",
+            "type": "cpu",
+            "outputColor": "blue"
+        },
+        {
+            "key": "│ {#34}󰉉 disk    {#keys}│",
+            "type": "disk",
+            "outputColor": "magenta"
+        },
+        {
+            "key": "│ {#35} memory  {#keys}│",
+            "type": "memory",
+            "outputColor": "yellow"
+        },
+        {
+            "key": "├───────────┤",
+            "type": "custom"
+        },
+        {
+            "key": "│ {#36} colors  {#keys}│",
+            "type": "colors",
+            "symbol": "circle"
+        },
+        {
+            "key": "╰───────────╯",
+            "type": "custom"
+        }
+    ]
+}

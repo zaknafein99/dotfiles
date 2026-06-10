@@ -1,6 +1,6 @@
 add_newline = true
 command_timeout = 500
-format = "$hostname$custom[$directory$git_branch$git_status]($style)$character"
+format = "$hostname$python$custom[$directory$git_branch$git_status]($style)$character"
 
 [character]
 error_symbol = "[✗](bold cyan)"
@@ -54,3 +54,7 @@ command = 'echo "󰈺 fish"'
 when = 'test "$STARSHIP_SHELL" = "fish"'
 format = "[$output]($style) "
 style = "bold #cba6f7"
+
+[python]
+symbol = " "
+format = '[($symbol$virtualenv)](bold #a6e3a1) '
